@@ -19,7 +19,7 @@ const Renderer  = function () {
                 let postId = "#" + post.id; 
                 $(postId).append(
                     `<div class="comment" data-id=${comment.id}>
-                       ${comment.text} <button class="delete-comment >X</button>
+                       ${comment.text} <button class="delete-comment" >X</button>
                     </div>`
                 )
             }

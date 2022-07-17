@@ -17,7 +17,7 @@ $("#posts").on("click", ".delete-post", function () {
     render();
 });
 
-$("#posts").on("click", ".add-comment", function () {
+$("body").on("click", "#add-comment", function () {
     let postId =  $(this).closest(".post").data().id;
     let commentText = $(this).siblings(".comment-input").val();
     tweeter.addComment(postId, commentText);
@@ -25,7 +25,7 @@ $("#posts").on("click", ".add-comment", function () {
   });
 
 $("#posts").on("click", ".delete-comment", function () {
-    let commentId = $(this).closest(".comments").data().id;
+    let commentId = $(this).closest(".comment").data().id;
     let postId = $(this).closest('.post').data().id;
     tweeter.removeComment(postId, commentId);
     render();
